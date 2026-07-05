@@ -39,11 +39,14 @@ export const venueSlice = createSlice({
   reducers: {
    
     incrementQuantity: (state, action) => {
-      const { payload: index } = action;
+      const { payload: index } = action; // Aqui index puede valer 2 suponiendo
+      //Aqui state es como state[2]
       if (state[index]) {
         if (state[index].name === " Auditorium Hall (Capacity:200)" && state[index].quantity >= 3) {
+          //Aqui si se selecciona mas de 3 selanza enmediatamente return, por que ese es el limite 
           return;        }
-        state[index].quantity++;
+
+        state[index].quantity++; // aumenta 1
       }
     },
     decrementQuantity: (state, action) => {

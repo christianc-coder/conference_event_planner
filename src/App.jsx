@@ -28,6 +28,8 @@ function App() {
           </div>
         </div>
       </header>
+      
+      {/*Aqui se divide las 2 secciones*/}
 
       <div className={`event-list-container ${showVenue ? 'visible' : ''}`}>
         <ConferenceEvent />
